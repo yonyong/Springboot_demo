@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<!--hello,<span th:text="${list}"> </span>!-->
+<li>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>标题</th>
+            <th>时间</th>
+            <th>内容</th>
+        </tr>
+        <tr th:each="info:${list}">
+            <th th:text="${info.id}"></th>
+            <th th:text="${info.title}"></th>
+            <th th:text="${info.date}"></th>
+            <th th:text="${info.content}"></th>
+
+        </tr>
+    </table>
+</li>
+</body>
+</html>
